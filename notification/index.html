@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Admin Dashboard | UEM JAIPUR</title>
+        <!-- == Styles == -->
+        <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- == Navigation == -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <span class="title">UEM Product Develop Cell</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </span>
+                        <span class="title">Devices</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="notifications-outline"></ion-icon>
+                        </span>
+                        <span class="title">Notification</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="card-outline"></ion-icon>
+                        </span>
+                        <span class="title">Recharge Pack</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- == Main == -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="Untitled design.png" alt="">
+                </div>
+            </div>
+
+<h1>Notification List</h1>
+
+<input type="text" id="search" placeholder="Search">
+<button class="button" id="addNotification">+</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sl. No.</th>
+      <th>Title</th>
+      <th>Time</th>
+      <th>Location</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Add rows here using JavaScript -->
+  </tbody>
+</table>
+
+<script>
+const addNotificationButton = document.getElementById('addNotification');
+const notificationsTableBody = document.querySelector('tbody');
+
+let notifications = [];
+let notificationId = 1; // Counter for notification IDs
+
+// Function to add a new notification
+function addNotification() {
+  const title = prompt("Enter notification title:");
+  const description = prompt("Enter notification description:");
+
+  // Add new notification to the array
+  notifications.push({
+    id: notificationId++,
+    title: title,
+    description: description,
+    createdDate: new Date(),
+    status: 'Active',
+  });
+
+  // Update the table with the new notification
+  renderNotifications();
+}
+
+// Function to render the notifications in the table
+function renderNotifications() {
+  notificationsTableBody.innerHTML = ''; // Clear the table body
+
+  notifications.forEach(notification => {
+    const row = notificationsTableBody.insertRow();
+    const cell1 = row.insertCell();
+    const cell2 = row.insertCell();
+    const cell3 = row.insertCell();
+    const cell4 = row.insertCell();
+    const cell5 = row.insertCell();
+    const cell6 = row.insertCell();
+    const cell7 = row.insertCell();
+
+    cell1.textContent = notification.id;
+    cell2.textContent = notification.title;
+    cell3.textContent = notification.description;
+    cell4.textContent = notification.createdDate.toLocaleString();
+    cell5.textContent = notification.status;
+
+    const sendButton = document.createElement('button');
+    sendButton.classList.add('button');
+    sendButton.textContent = 'Send Notification';
+    cell6.appendChild(sendButton);
+
+    // Add action buttons
+    const actionButtons = document.createElement('div');
+    actionButtons.classList.add('action-buttons');
+    cell7.appendChild(actionButtons);
+
+    // Eye icon
+    const viewButton = document.createElement('button');
+    viewButton.innerHTML = '&#128065;';
+    actionButtons.appendChild(viewButton);
+
+    // Edit icon
+    const editButton = document.createElement('button');
+    editButton.innerHTML = '&#9998;';
+    actionButtons.appendChild(editButton);
+
+    // Delete icon
+    const deleteButton = document.createElement('button');
+    deleteButton.innerHTML = '&#10060;';
+    actionButtons.appendChild(deleteButton);
+  });
+}
+
+// Add event listener for the "Add Notification" button
+addNotificationButton.addEventListener('click', addNotification);
+
+// Initial rendering of notifications
+renderNotifications();
+</script>
+
+    <!-- == ionicons == -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
