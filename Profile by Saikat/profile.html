@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard | UEM JAIPUR</title>
+ 
+    <!-- == Styles == -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- == Navigation == -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <span class="title">UEM Product Develop Cell</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </span>
+                        <span class="title">Devices</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="notifications-outline"></ion-icon>
+                        </span>
+                        <span class="title">Notification</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="card-outline"></ion-icon>
+                        </span>
+                        <span class="title">Recharge Pack</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- == Main == -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="uem.png" alt="">
+                </div>
+            </div>
+
+  <main>
+    <section class="profile-header">
+      <div class="profile-picture">
+        <img src="mrinmoy.jpeg" alt="Profile Picture">
+      </div>
+      <div class="profile-info">
+        <h1>Mrinmoy Mondal</h1>
+        <p>mondal.mrinmoy2003@gmil.com</p>
+      </div>
+    </section>
+    <section class="profile-content">
+      <h2>Shoe Details</h2>
+      <ul>
+        <p>Shoe Model: UEM Smartshoe Gen 1, Shoe size 9</p>
+      </ul>
+      <h2>Activity Summary</h2>
+      <div class="activity-summary">
+        <div class="activity-item">
+          <p>Minutes tracked : 120</p>
+          <p>GPS tracking : Active</p>
+        </div>
+      </div>
+      <h2>Pack Validity</h2>
+      <div class="Pack Validity">
+        <div class="goal-item">
+          <p>Plan Progress: 80%</p>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" style="width: 83%;"></div>
+          </div>
+        </div>
+        <div class="goal-item">
+          <p>Weekly Distance Goal: 20km</p>
+          <p>Progress: 60%</p>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" style="width: 60%;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+
+    // add JS file hovered class to selected list item
+let list = document.querySelectorAll(".navigation li");
+
+function activeLink() {
+  list.forEach((item) => {
+    item.classList.remove("hovered");
+  });
+  this.classList.add("hovered");
+}
+
+list.forEach((item) => item.addEventListener("mouseover", activeLink));
+
+// Menu Toggle
+let toggle = document.querySelector(".toggle");
+let navigation = document.querySelector(".navigation");
+let main = document.querySelector(".main");
+
+toggle.onclick = function () {
+  navigation.classList.toggle("active");
+  main.classList.toggle("active");
+};
+  </script>
+    <!-- == ionicons == -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
