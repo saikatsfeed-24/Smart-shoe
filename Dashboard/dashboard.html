@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard | UEM JAIPUR</title>
+    <!-- == Styles == -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- == Navigation == -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <span class="title">UEM Product Develop Cell</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </span>
+                        <span class="title">Devices</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="notifications-outline"></ion-icon>
+                        </span>
+                        <span class="title">Notification</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="card-outline"></ion-icon>
+                        </span>
+                        <span class="title">Recharge Pack</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- == Main == -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="Untitled design.png" alt="">
+                </div>
+            </div>
+
+            <!-- == Cards == -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">621</div>
+                        <div class="cardName">Daily Steps</div>
+                    </div>
+
+                    <div class="iconBx">
+                    <ion-icon name="footsteps-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">Minutes Tracked</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="navigate-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">0</div>
+                        <div class="cardName">SOS Alert</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">21</div>
+                        <div class="cardName">Pack Validity</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==Order Details List == -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Track Devices</h2>
+                        <a href="#" class="btn">View All</a>   
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>IMEI No.</td>
+                                <td>Child Name</td>
+                                <td>Pack Validity</td>
+                                <td>GPS</td>
+                            </tr>
+                        </thead>
+              <tbody>
+                            <tr>
+                                <td>12345678</td>
+                                <td>Shivam</td>
+                                <td>Active</td>
+                                <td><span class="status tracking">Tracking</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>87654321</td>
+                                <td>Mary</td>
+                                <td>Active</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>01234567</td>
+                                <td>Rama</td>
+                                <td>Paid</td>
+                                <td><span class="status tracking">Tracking</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>21436587</td>
+                                <td>Shyam</td>
+                                <td>Expired</td>
+                                <td><span class="status expired">Expired</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- == New Customers == -->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Past Records</h2>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="child india.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Shivam<br> <span>Child 1</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="child.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Mary <br> <span>Child 2</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="child new.png" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Rama <br> <span>Child 3</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="images.jpeg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Shyam <br> <span>Child 4</span></h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- == Scripts ==  -->
+    <script src="assets/js/main.js"></script>
+    <script>
+
+        // add JS file hovered class to selected list item
+    let list = document.querySelectorAll(".navigation li");
+    
+    function activeLink() {
+      list.forEach((item) => {
+        item.classList.remove("hovered");
+      });
+      this.classList.add("hovered");
+    }
+    
+    list.forEach((item) => item.addEventListener("mouseover", activeLink));
+    
+    // Menu Toggle
+    let toggle = document.querySelector(".toggle");
+    let navigation = document.querySelector(".navigation");
+    let main = document.querySelector(".main");
+    
+    toggle.onclick = function () {
+      navigation.classList.toggle("active");
+      main.classList.toggle("active");
+    };
+    
+      </script>
+
+    <!-- == ionicons == -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
