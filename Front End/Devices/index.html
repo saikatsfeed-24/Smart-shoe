@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard | UEM JAIPUR</title>
+    <!-- == Styles == -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- == Navigation == -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <span class="title">UEM Product Develop Cell</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Dashboard/dashboard.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Profile/profile.html">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Devices/index.html">
+                        <span class="icon">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </span>
+                        <span class="title">Devices</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Notification/index.html">
+                        <span class="icon">
+                            <ion-icon name="notifications-outline"></ion-icon>
+                        </span>
+                        <span class="title">Notification</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Password/Password.html">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="../Recharge/recharge.html">
+                        <span class="icon">
+                            <ion-icon name="card-outline"></ion-icon>
+                        </span>
+                        <span class="title">Recharge Pack</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Help/help.html">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Login/index.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+         <!-- == Main == -->
+         <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="Untitled design.png" alt="">
+                </div>
+            </div>
+
+    </nav>
+  </header>
+  <main>
+
+    <section class="hero">
+      <h1>Devices </h1>
+      <p>Check your innovative smart shoes</p>
+    </section>
+    <section class="devices">
+      <div class="device">
+        <img src="SHOE 3.png" alt="UEM Smart Shoe Gen 1">
+        <h3>UEM Smart Shoe Gen 1</h3>
+        <p>Our first generation smart shoe, featuring basic fitness tracking and notification alerts</p>
+        <button>Learn More</button>
+      </div>
+      <div class="device">
+        <img src="SHOE 2.png" alt="UEM Smart Shoe Gen 2">
+        <h3>UEM Smart Shoe Gen 2</h3>
+        <p>Our second generation smart shoe, featuring advanced fitness tracking, GPS and music control</p>
+        <button>Learn More</button>
+      </div>
+      <div class="device">
+        <img src="SHOE 1.png" alt="UEM Smart Shoe Gen 3">
+        <h3>UEM Smart Shoe Gen 3</h3>
+        <p>Our latest generation smart shoe, featuring AI-powered fitness coaching and more</p>
+        <button>Learn More</button>
+      </div>
+    </section>
+  </main>
+  <script>
+       // add JS file hovered class to selected list item
+let list = document.querySelectorAll(".navigation li");
+
+function activeLink() {
+  list.forEach((item) => {
+    item.classList.remove("hovered");
+  });
+  this.classList.add("hovered");
+}
+
+list.forEach((item) => item.addEventListener("mouseover", activeLink));
+
+// Menu Toggle
+let toggle = document.querySelector(".toggle");
+let navigation = document.querySelector(".navigation");
+let main = document.querySelector(".main");
+
+toggle.onclick = function () {
+  navigation.classList.toggle("active");
+  main.classList.toggle("active");
+};
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
