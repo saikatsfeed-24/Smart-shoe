@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #222;
+  color: #eee;
+  font-family: sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action-buttons button {
+  background-color: transparent;
+  border: none;
+  color: #eee;
+  font-size: 18px;
+  padding: 5px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>Notification List</h1>
+
+<input type="text" id="search" placeholder="Search">
+<button class="button" id="addNotification">+</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Created Date</th>
+      <th>Status</th>
+      <th>Send Notification</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Add rows here using JavaScript -->
+  </tbody>
+</table>
+
+<script>
+const addNotificationButton = document.getElementById('addNotification');
+const notificationsTableBody = document.querySelector('tbody');
+
+let notifications = [];
+let notificationId = 1; // Counter for notification IDs
+
+// Function to add a new notification
+function addNotification() {
+  const title = prompt("Enter notification title:");
+  const description = prompt("Enter notification description:");
+
+  // Add new notification to the array
+  notifications.push({
+    id: notificationId++,
+    title: title,
+    description: description,
+    createdDate: new Date(),
+    status: 'Active',
+  });
+
+  // Update the table with the new notification
+  renderNotifications();
+}
+
+// Function to render the notifications in the table
+function renderNotifications() {
+  notificationsTableBody.innerHTML = ''; // Clear the table body
+
+  notifications.forEach(notification => {
+    const row = notificationsTableBody.insertRow();
+    const cell1 = row.insertCell();
+    const cell2 = row.insertCell();
+    const cell3 = row.insertCell();
+    const cell4 = row.insertCell();
+    const cell5 = row.insertCell();
+    const cell6 = row.insertCell();
+    const cell7 = row.insertCell();
+
+    cell1.textContent = notification.id;
+    cell2.textContent = notification.title;
+    cell3.textContent = notification.description;
+    cell4.textContent = notification.createdDate.toLocaleString();
+    cell5.textContent = notification.status;
+
+    const sendButton = document.createElement('button');
+    sendButton.classList.add('button');
+    sendButton.textContent = 'Send Notification';
+    cell6.appendChild(sendButton);
+
+    // Add action buttons
+    const actionButtons = document.createElement('div');
+    actionButtons.classList.add('action-buttons');
+    cell7.appendChild(actionButtons);
+
+    // Eye icon
+    const viewButton = document.createElement('button');
+    viewButton.innerHTML = '&#128065;';
+    actionButtons.appendChild(viewButton);
+
+    // Edit icon
+    const editButton = document.createElement('button');
+    editButton.innerHTML = '&#9998;';
+    actionButtons.appendChild(editButton);
+
+    // Delete icon
+    const deleteButton = document.createElement('button');
+    deleteButton.innerHTML = '&#10060;';
+    actionButtons.appendChild(deleteButton);
+  });
+}
+
+// Add event listener for the "Add Notification" button
+addNotificationButton.addEventListener('click', addNotification);
+
+// Initial rendering of notifications
+renderNotifications();
+</script>
+
+</body>
+</html>
