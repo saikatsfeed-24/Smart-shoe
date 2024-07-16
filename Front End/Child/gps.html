@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add Map</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        height: 100%;
+        display: flex;
+      }
+
+      .sidebar {
+        flex-basis: 15rem;
+        flex-grow: 1;
+        padding: 1rem;
+        max-width: 30rem;
+        height: 100%;
+        box-sizing: border-box;
+        overflow: auto;
+      }
+
+      #map {
+        flex-basis: 0;
+        flex-grow: 4;
+        height: 450px;
+      }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./location.css">
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </span>
+                    <span class="title">UEM Product Develop Cell</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../Dashboard/dashboard.html">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="title">Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../Profile/profile.html">
+                    <span class="icon">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </span>
+                    <span class="title">Profile</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../Devices/devices.html">
+                    <span class="icon">
+                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                    </span>
+                    <span class="title">Devices</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../Notification/notification.html">
+                    <span class="icon">
+                        <ion-icon name="notifications-outline"></ion-icon>
+                    </span>
+                    <span class="title">Notification</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../Password/password.html">
+                    <span class="icon">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </span>
+                    <span class="title">Password</span>
+                </a>
+            </li>
+
+           
+            <li>
+                <a href="../Recharge/recharge.html">
+                    <span class="icon">
+                        <ion-icon name="card-outline"></ion-icon>
+                    </span>
+                    <span class="title">Recharge Pack</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../Help/help.html">
+                    <span class="icon">
+                        <ion-icon name="help-outline"></ion-icon>
+                    </span>
+                    <span class="title">Help</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Dashboard/index.html">
+                    <span class="icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </span>
+                    <span class="title">Sign Out</span>
+                </a>
+            </li>
+            
+        </ul>
+      </div>
+
+      <!-- == Main == -->
+      <div class="main">
+          <div class="topbar">
+              <div class="toggle">
+                  <ion-icon name="menu-outline"></ion-icon>
+              </div>
+
+              <div class="search">
+                  <label>
+                      <input type="text" placeholder="Search here">
+                      <ion-icon name="search-outline"></ion-icon>
+                  </label>
+              </div>
+
+              <div class="user">
+                  <img src="../UEM-Symbol.png" alt="">
+              </div>
+          </div>
+          <div class="cardBox">
+            <div class="card">
+                <div>
+                    <div class="numbers">621</div>
+                    <div class="cardName">Daily Steps</div>
+                </div>
+
+                <div class="iconBx">
+                <ion-icon name="footsteps-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">80</div>
+                    <div class="cardName">Minutes Tracked</div>
+                </div>
+
+                <div class="iconBx">
+                    <ion-icon name="navigate-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">0</div>
+                    <div class="cardName">SOS Alert</div>
+                </div>
+
+                <div class="iconBx">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">21</div>
+                    <div class="cardName">Pack Validity</div>
+                </div>
+
+                <div class="iconBx">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==Order Details List == -->
+        <div class="details">
+            <div class="recentOrders">
+                <div class="cardHeader">
+                    <h2>Track Devices</h2>
+                    <input type="date" name="" id="">   
+                </div>
+
+                <div id="map"></div>
+            </div>
+
+            <!-- == New Customers == -->
+            <div class="recentCustomers">
+                <div class="cardHeader">
+                    <h2>IMEI No. - 123456789012345</h2>
+                </div>
+                <br>
+                <h3>Activity Details</h3>
+
+                <table>
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="./walking.jpeg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Walking<br> <span>2 hours 00 minutes</span></h4>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="./running.png" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Running<br> <span>1 hour 30 minutes</span></h4>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="./cycling.png" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Cycling<br> <span>40 minutes</span></h4>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="./skipping.png" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Skipping <br> <span>50 minutes</span></h4>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="./jumping.jpeg" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Jumping <br> <span>20 minutes</span></h4>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="60px">
+                            <div class="imgBx"><img src="./climbing.png" alt=""></div>
+                        </td>
+                        <td>
+                            <h4>Climbing <br> <span>20 minutes</span></h4>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+      </div>
+      
+      <script>
+        function initMap() {
+            fetch('fetch_coordinates.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length === 0) {
+                        console.error('No coordinates found');
+                        return;
+                    }
+
+                    const map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 5,
+                        center: { lat: 36.7783, lng: -119.4179 } // Center of California
+                    });
+
+                    const routeCoordinates = data.map(coord => {
+                        return { lat: parseFloat(coord.latitude), lng: parseFloat(coord.longitude) };
+                    });
+
+                    const routePath = new google.maps.Polyline({
+                        path: routeCoordinates,
+                        geodesic: true,
+                        strokeColor: '#FF0000',
+                        strokeOpacity: 1.0,
+                        strokeWeight: 2
+                    });
+
+                    routePath.setMap(map);
+
+                    // Add start marker
+                    const startMarker = new google.maps.Marker({
+                        position: routeCoordinates[0],
+                        map: map,
+                        title: 'Start Location',
+                        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+                    });
+
+                    // Add end marker
+                    const endMarker = new google.maps.Marker({
+                        position: routeCoordinates[routeCoordinates.length - 1],
+                        map: map,
+                        title: 'End Location',
+                        icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_P6nPYaiEv4z9y04YuykH8J-Gg7MuJws&callback=initMap">
+        </script>
+        <!-- == ionicons == -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
